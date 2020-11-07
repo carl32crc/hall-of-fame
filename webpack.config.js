@@ -14,7 +14,7 @@ function getFiles() {
         return console.log('Unable to scan directory: ' + error)
       }
       resolve(files)
-    });
+    })
   })
 }
 
@@ -48,7 +48,7 @@ const config = async () => {
         {
           test: /\.js$/,
           enforce: 'pre',
-          use: ['source-map-loader'],
+          use: ['source-map-loader']
         },
         {
           test: /\.(png|jpe?g|gif)$/i,
@@ -57,10 +57,10 @@ const config = async () => {
               loader: 'file-loader',
               options: {
                 regExp: /\/([a-z0-9]+)\/[a-z0-9]+\.png$/i,
-                name: '[1]-[name].[ext]',
-              },
-            },
-          ],
+                name: '[1]-[name].[ext]'
+              }
+            }
+          ]
         },
         {
           test: /\.html$/,
@@ -73,7 +73,7 @@ const config = async () => {
       ]
     },
     devServer: {
-      historyApiFallback: true,
+      historyApiFallback: true
     },
     resolve: {
       modules: [path.resolve(__dirname, './src'), 'node_modules'],
@@ -89,7 +89,7 @@ const config = async () => {
       }),
       new SourceMapDevToolPlugin({
         filename: '[file].map'
-      }),
+      })
     ]
   }
 }
