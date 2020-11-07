@@ -1,9 +1,9 @@
 import React from 'react'
 
-import { Title } from 'components/Title'
+import { Gallery } from 'pages/Gallery'
 
 export function App() {
   return (
-    <Title>Projects</Title>
+    <Gallery />
   );
 }

@@ -2,7 +2,11 @@ module.exports = function (api) {
   api.cache(true);
 
   const presets = ['@babel/preset-env', '@babel/preset-react']
-  const plugins = ['@babel/plugin-transform-runtime', ['@babel/plugin-proposal-decorators', { 'legacy': true }]]
+  const plugins = [
+    '@babel/plugin-transform-runtime',
+    ['babel-plugin-styled-components', { displayName: true }],
+    ['@babel/plugin-proposal-decorators', { 'legacy': true }]
+  ]
 
   return {
     presets,
