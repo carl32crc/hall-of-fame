@@ -4,7 +4,8 @@
   },
   "env": {
     "es6": true,
-    "node": true
+    "node": true,
+    "browser": true
   },
   "parser": "babel-eslint",
   "rules": {
@@ -15,7 +16,7 @@
       "off"
     ],
     "space-before-function-paren": [
-      2,
+      "error",
       "never"
     ]
   },

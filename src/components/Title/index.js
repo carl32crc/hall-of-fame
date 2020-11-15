@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { StyledTitle } from './styles'
 
 const titlePropTypes = {
   children: PropTypes.oneOfType([
@@ -8,6 +9,10 @@ const titlePropTypes = {
   ])
 }
 
-const Title = ({ children }) => <h1>{children}</h1>
+const Title = ({ children }) => <StyledTitle>{children}</StyledTitle>
 
 Title.propTypes = titlePropTypes
+
+export {
+  Title
+}
